@@ -1,5 +1,5 @@
 
-from playsound import playsound
+#from playsound import playsound
 import random
 from english_words import get_english_words_set
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ def onclick(event):
     dist=((event.xdata-target_x)**2 + (event.ydata-target_y)**2)**0.5
     if dist<0.5:
         ax.set_title("Captcha passed you may proceed! you can close this window to continue")
-        playsound(r"C:\Users\Harshil Gandhi\Downloads\i_m_just_a_man.mp3")
+        #playsound(r"C:\Users\Harshil Gandhi\Downloads\i_m_just_a_man.mp3")
         choice1=int(input(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Select any one of this::::::::::::::::::::::::::::::::\
 :::::::::::::\n1.To do list\n2.wordle\n3.rock,paper,scissors\nEnter your choice:"))
         tasks=[]
@@ -111,7 +111,7 @@ def onclick(event):
     else:
         ax.set_title(f"Captcha failed")
         print("Better luck next time")
-        playsound(r"C:\Users\Harshil Gandhi\Downloads\oof.mp3")
+        #playsound(r"C:\Users\Harshil Gandhi\Downloads\oof.mp3")
 fig.canvas.draw()   
 fig.canvas.mpl_connect('button_press_event',onclick)
 plt.legend()
